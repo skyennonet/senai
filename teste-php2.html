@@ -1,0 +1,33 @@
+<?php
+// Conexão com o banco de dados
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verifica se a conexão foi bem sucedida
+if ($conn->connect_error) {
+	die("Conexão falhou: " . $conn->connect_error);
+}
+
+// Insere os dados no banco de dados
+$empresa = $_POST["empresa"];
+$nome = $_POST["nome"];
+$equipamento = $_POST["equipamento"];
+$numero_serie = $_POST["numero_serie"];
+$tipo_defeito = $_POST["tipo_defeito"];
+
+$sql = "INSERT INTO chamados (empresa, nome, equipamento, numero_serie, tipo_defeito) VALUES ('$empresa', '$nome', '$equipamento', '$numero_serie', '$tipo_defeito')";
+
+if ($conn->query($sql) === TRUE) {
+	// Retorna o número de protocolo
+	$protocolo = $conn->insert_id;
+	echo "Chamado registrado com sucesso. Número de protocolo: " . $protocolo;
+} else {
+	echo "Erro ao registrar chamado: " . $conn->error;
+}
+
+$conn->close();
+?>

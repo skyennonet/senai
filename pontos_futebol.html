@@ -1,0 +1,37 @@
+<script>
+var calculaPontos = function(vitorias, empates) {
+	return (vitorias * 3) + parseInt(empates);
+};
+var pulalinha = function() {
+	document.write("<br>");
+};
+var mostra = function(frase) {
+	document.write(frase);
+	pulalinha();
+};
+
+var vitorias = prompt("quantos jogos o cdc Futebol Clube venceu?");
+var empates = prompt("quantos jogos o cdc Futebol Clube empatou?");
+
+//var pontos = (vitorias * 3 ) + parseInt(empates);
+
+//var vitoriasAdversario = prompt("quantos jogos o adversario venceu?");
+//var empatesAdversario = prompt("quantos jogos o adversario empatou?");
+//var pontosAdversario = (vitoriasAdversario * 3 ) + parseInt(empatesAdversario);
+
+mostra("Nosso time tem " + calculaPontos(vitorias, empates) + " pontos!");
+/*mostra("Nosso adversario tem " + calculaPontos() + "pontos");
+
+//if (pontos > pontosAdversario){
+	mostra ("nosso time esta indo melhor que os  livros velhos!");
+}
+if(pontos < pontosAdversario) {
+mostra("Nosso time esta indo PIOR que o Livros Velhos!");
+}
+if(pontos == pontosAdversario) {
+	mostra("Nosso time esta Empatado com o livros velhos!");
+}*/
+
+
+	
+</script>	

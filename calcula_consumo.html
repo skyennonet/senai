@@ -1,0 +1,24 @@
+<h3>Alcool ou Gasolina</h3>
+<script>
+var tanque = 40
+var caminhocomgasolina = 480
+var consumodegasolina = caminhocomgasolina / tanque
+var caminhoComAlcool = 300
+var consumodealcool = caminhoComAlcool / tanque
+var precodagasolina = 2.90
+var precodoalcool = 2.40 
+var gastogasolina = precodagasolina / consumodegasolina
+var gastoalcool = precodoalcool / consumodealcool
+
+var pulaLinha = function() {
+document.write("<br>");
+};	
+document.write ("o consumo da gasolina é " + consumodegasolina );
+pulaLinha()
+document.write ("o consumo da gasolina é " + consumodealcool  );
+pulaLinha()
+document.write ("preço por kilometro rodado em gasolina é: " + gastogasolina.toFixed(2)  );
+pulaLinha()
+document.write ("o preço por kilometro rodado em alcool é: " + gastoalcool.toFixed(2) );
+pulaLinha()
+</script>

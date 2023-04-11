@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de Chamado</title>
+</head>
+<body>
+	<h1>Formulário de Chamado</h1>
+	<form action="submit.php" method="post">
+		<label for="empresa">Empresa:</label>
+		<input type="text" name="empresa" id="empresa" required><br><br>
+		<label for="nome">Nome:</label>
+		<input type="text" name="nome" id="nome" required><br><br>
+		<label for="equipamento">Equipamento:</label>
+		<input type="text" name="equipamento" id="equipamento" required><br><br>
+		<label for="numero_serie">Número de Série:</label>
+		<input type="text" name="numero_serie" id="numero_serie" required><br><br>
+		<label for="tipo_defeito">Tipo de Defeito:</label>
+		<input type="text" name="tipo_defeito" id="tipo_defeito" required><br><br>
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>
+<?php
+// Conexão com o banco de dados
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verifica se a conexão foi bem sucedida
+if ($conn->connect_error) {
+	die("Conexão falhou: " . $conn->connect_error);
+}
+
+// Insere os dados no banco de dados
+$empresa = $_POST["empresa"];
+$nome = $_POST["nome"];
+$equipamento = $_POST["equipamento"];
+$numero_serie = $_POST["numero_serie"];
+$tipo_defeito = $_POST["tipo_defeito"];
+
+$sql = "INSERT INTO chamados (empresa, nome, equipamento, numero_serie, tipo_defeito) VALUES ('$empresa', '$nome', '$equipamento', '$numero_serie', '$tipo_defeito')";
+
+if ($conn->query($sql) === TRUE) {
+	// Retorna o número de protocolo
+	$protocolo = $conn->insert_id;
+	echo "Chamado registrado com sucesso. Número de protocolo: " . $protocolo;
+} else {
+	echo "Erro ao registrar chamado: " . $conn->error;
+}
+
+$conn->close();
+?>
