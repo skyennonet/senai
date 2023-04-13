@@ -1,0 +1,3 @@
+git remote add origin https://github.com/skyennonet/senai.git
+
+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

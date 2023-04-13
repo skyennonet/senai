@@ -17,6 +17,20 @@ var peso = 75;
 var altura = 1.72;
 var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
 	mostra("o seu imc é " + imcDoUsuario.toFixed(3));
+if (imcDoUsuario< 18.5){
+	mostra ("Seu imc indica que vc esta abaixo do peso");
+}
+if(imcDoUsuario > 35){
+	mostra("seu imc indica que voce esta acima do peso");
+}
+/*if(imcDoUsuario>18.5){
+	if(imcDoUsuario<35){
+		mostra("ok seu imc esta entre os dois limites");
+	}
+}*/
+if(imcDoUsuario>=18.5&&imcDoUsuario=<35){
+	mostra("ok! seu imc esta entre os dois limites");
+}
 	
 var imc = calculaIMC(altura, peso);	
 //exercicios antes da sessão 3.5(fim)
