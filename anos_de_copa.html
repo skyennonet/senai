@@ -2,13 +2,14 @@
     var mostra = function(frase) {
         document.write(frase + "<br>");
     }
+    var anoLImite = prompt("Qual pe o ano limite?");
     var anoDeCopa = 1930;
 
-    while(anoDeCopa <= 2014){
+    while(anoDeCopa <=anoLImite ){
         mostra(anoDeCopa + " tem copa!");
         anoDeCopa = anoDeCopa + 4;
     }
-    mostra("Ufa! esses foram os anos de copa até 2014");
+    mostra("Ufa! esses foram os anos de copa até " + anoLImite);
 
     
 </script>
