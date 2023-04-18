@@ -1,0 +1,24 @@
+<script>
+var numeroPensado = Math.round(Math.random()* 100);
+var numeroDeTentativa = 1;
+while(numeroDeTentativa <= 3){
+    var chute = prompt("Qual voce acha que é ");
+    if(chute == numeroPensado){
+            alert("parabens , voce acertou! ");
+            break;
+    } else {
+            if(chute > numeroPensado){
+                alert(" o numero chutado é maior do que eu pensei");
+            }else{
+                alert("o numero chutado é menor do que eu pensei");
+            }
+            alert ("Voce errou. "+ chute +" não é o numero Será que ainda tem mais tentativas?");
+            }
+        }    
+        numeroDeTentativa++;
+    
+    
+
+
+    
+</script>
