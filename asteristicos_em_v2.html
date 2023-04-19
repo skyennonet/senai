@@ -1,0 +1,25 @@
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+    }
+    function mostra(frase){
+        document.write(frase);
+    }
+    var limiteLinhas = 10;
+    var limiteColunas = 20;
+
+    for(var linha = 1; linha <= limiteLinhas; linha++){
+        for(var coluna = 1; coluna <= limiteColunas; coluna++)
+        {
+            if ((coluna == linha )||(coluna == limiteColunas - linha))
+            {
+                mostra("*");
+            }
+            else
+            {
+                mostra ("_");
+            }
+        }
+        pulaLinha();
+    }
+</script>

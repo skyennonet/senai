@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo de números</title>
+</head>
+<body>
+  <button onclick="iniciarJogo()">Iniciar Jogo</button>
+  <p id="resultado"></p>
+  
+  <script>
+    function gerarNumerosAleatorios() {
+        let numerosSorteados = [];
+        for (let i = 0; i < 6; i++) {
+          let numero = Math.floor(Math.random() * 60) + 1;
+          numerosSorteados.push(numero);
+        }
+        return numerosSorteados;
+      }
+
+      function solicitarNumerosUsuario() {
+        let numerosUsuario = [];
+        for (let i = 0; i < 6; i++) {
+          let numero = prompt("Digite um número de 1 a 60:");
+          numerosUsuario.push(numero);
+        }
+        return numerosUsuario;
+      }
+      function verificarAcertos(numerosSorteados, numerosUsuario) {
+        let acertos = 0;
+        for (let i = 0; i < numerosSorteados.length; i++) {
+          if (numerosUsuario.includes(numerosSorteados[i])) {
+            acertos++;
+          }
+        }
+        return acertos;
+      }
+      
+    function iniciarJogo() {
+      let numerosSorteados = gerarNumerosAleatorios();
+      let numerosUsuario = solicitarNumerosUsuario();
+      let acertos = verificarAcertos(numerosSorteados, numerosUsuario);
+      
+      let resultado = document.getElementById("resultado");
+      resultado.innerHTML = "Você acertou " + acertos + " números!";
+    }
+  </script>
+</body>
+</html>
