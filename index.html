@@ -1,98 +1,163 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
-
-
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O que eu mais gosto em São Paulo</title>
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        margin: 0 auto;
+        width: 960px;
+        color: red;
+        background-color: aliceblue;
+    }
 
-    <style> 
-    body{
-        background: #fff1d6 url(E:/17973908.jpg);
-        font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    body {
+        background: #fff1d6;
+        font-family: "Lucida Grande", "lucida Sans Unicode", Verdana, sans-serif;
         line-height: 1.6;
     }
 
-    .container{
-    margin:0 auto;
-    width:960px;
-    } 
-    .place{
-        background-color: #FFF;
-        border-color: #CCC #999 #999 #CCC;
-        border: 1px solid #CCC;
-        margin-bottom: 20px;
+    .place {
+        background-color: #fff;
+        border-color: #ccc #999 #999 #ccc;
+        border: 1px solid #ccc;
+        margin: 20px 50px 45px 60px;
         padding: 10px;
-
     }
-    .place h2{
-        border-bottom: 1px dashed #7e9f19;
+
+    .article h2 {
+        border-bottom: 5px dashed #7E9f19;
         margin: 0;
+
     }
 
-    .place a{
-        color #2C88A7;
+    .article a {
+        color: #2c88a7;
         font-weight: bold;
+
     }
 
-    </style>
-</head>
+    h1 a:hover {
+        background-color: #7E9f19;
+        color: #fff
+    }
 
+    .article img {
+        border: 1px solid #7E9f19;
+        float: left;
+        margin: 10px 10px 0 0;
+        padding: 2px;
+    }
 
-
-    <div class='container'>
-    <body>
     
 
-        <h1> Oque eu mais gosto em São Paulo</h1>
-    <div class='place'>
-        <h2>Passear na Avenida Paulista!</h2>
-    <p>
-    Um dos principais centros financeiros da cidade, a avenida Paulista
-    também possui diversas opções de entretenimento. Endereço do Museu
-    de Arte de São Paulo, <em>MASP</em>, do Teatro Gazeta e muitos outros,
-    a região é de fácil acesso graças as diversas linhas de ônibus que
-    cruzam a avenida e a linha de metrô que passa por baixo dela.
-    </p>
+    footer {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    aside {
+        background-color: #fffbe4;
+        border: 1px solid#c9bc8f;
+        float: right;
+        padding: 10px;
+        width: 260px;
+    }
+
+    aside h3 {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    aside ol {
+        font-size: 12px;
+    }
+
+    .places {
+        float: left;
+        width: 660px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="places">
+        
+
+            <h1><a href=''>O que eu mais gosto em São Paulo</a></h1>
+            <article>
+                <h2>Passear na Avenida Paulista!</h2>
+                <img src="C:/Users/ALUNO/Desktop/fernando/avPaulista.jpg" alt="A varanda do Armazém Piola,
+                foto por Fernando Moraes" width="100" height="100">
+                <div class='clear'></div>
+                    <p class='paragrafo'>
+                    Um dos principais centros financeiros da cidade, a avenida Paulista
+                    também possui diversas opções de entretenimento. Endereço do Museu
+                    de Arte de São Paulo, <em>MASP</em>, do Teatro Gazeta e muitos outros,
+                    a região é de fácil acesso graças as diversas linhas de ônibus que
+                    cruzam a avenida e a linha de metrô que passa por baixo dela.
+                    </p>
+            </article>
+            <p>
+                A Avenida Paulista sempre é assunto. O que será que estão falando a
+                respeito no <a href='https://twitter.com/#!/search/Avenida Paulista' target='_blank'>Twitter</a>?
+            </p>
+        
+        <article>
+            <h2>Os bares da Vila Madalena</h2>
+            <img src="C:/Users/ALUNO/Desktop/fernando/vilamadalena.jpg" alt="A varanda do Armazém Piola,
+            foto por Fernando Moraes" width="100" height="100">
+            <div class='clear'></div>
+            <p>
+                Depois de um dia de trabalho, nada melhor do que um bom chopp, um
+                petisco e uma conversa em uma mesa de bar. Opções de sobra na região
+                das ruas Aspicuelta, Fradique Coutinho e Wisard.
+            </p>
 
 
-    <p>
-    A Avenida Paulista sempre é assunto. O que será que estão falando a respeito no <a href='https://twitter.com/#!/search/Avenida Paulista'
-    target='_blank'>Twitter</a>?
-    </p>
-    </div>
-    <div class='place'>
-    <h2>Os bares da Vila Madalena</h2>
-    <p>
-    Depois de um dia de trabalho, nada melhor do que um bom chopp, um
-    petisco e uma conversa em uma mesa de bar. Opções de sobra na região
-    das ruas Aspicuelta, Fradique Coutinho e Wisard.
-    </p>
-    <p>
-    Veja quais os melhores bares e restaurantes da região no
-    <a href='http://vejasp.abril.com.br/busca?chn=bares&qu=
-    &nbh=Pinheiros%20/%20Vila%20Madalena' target='_blank'>
-    Guia da VEJA São Paulo.
-    </a>
-    </p>
-    </div>
-    <div class='place'>
-    <h2>O Parque do Ibirapuera</h2>
+            <p>
+                Veja quais os melhores bares e restaurantes da região no
+                <a href='http://vejasp.abril.com.br/busca?chn=bares&qu=&nbh=Pinheiros%20/%20Vila%20Madalena' target='_blank'>
+                    Guia da VEJA São Paulo.
+                </a>
+
+            </p>
+        </article>
+        <article>
+            <h2>O Parque do Ibirapuera</h2>
+            <img src="C:/Users/ALUNO/Desktop/fernando/parquedoibirapuera.jpg" alt="A varanda do Armazém Piola,
+            foto por Fernando Moraes" width="100" height="100">
+            <div class='clear'></div>
+            <p>
+                Um dos cartões postais da cidade, o parque dispõe de mais de 1,5 km²
+                de área verde, lagos artificiais e pistas de cooper e ciclismo. E se
+                isso não fosse o suficiente, o parque costuma ser palco de diversos
+                eventos culturais ao longo do ano.
+            </p>
+        </article>
         <p>
-        Um dos cartões postais da cidade, o parque dispõe de mais de 1,5 km{^2}
-        de área verde, lagos artificiais e pistas de cooper e ciclismo. E se
-        isso não fosse o suficiente, o parque costuma ser palco de diversos
-        eventos culturais ao longo do ano.
-        </p>
-        <p>
-        Veja no <a href='http://goo.gl/maps/HoH8' target='_blank'>mapa</a> como chegar ao parque.
-    </p>
-    </div>
+            Veja no <a href='http://goo.gl/maps/HoH8' target="_blank">mapa</a> como chegar ao parque.</p>
+        </div>
+        <aside>
+            <h3> e existem muitos outros lugares interessantes na cidade...</h3>
+            <ol>
+                <li>o mercado municipal.</li>
+                <li>A sala são Paulo.</li>
+                <li>os estadios dos principais times de futebol da cidade.</li>
+                <li>diversos museus, como o memoria da america latina, museu da lingua portuguesa e o museu do ipiranga.
+                </li>
+                <li>e mais!</li>
+            </ol>
+        </aside>
 
+        <footer class='clear'>
+            <p>Parte do livro "HTML5 e CSS3: Domine a web do futuro."</p>
+        </footer>
 </body>
-</div>
+
 </html>
